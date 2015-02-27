@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
-			files: ['scss/*.scss'],
+			files: ['sass/*.scss'],
 			tasks: 'sass:dev',
 			options: {
 				livereload: true,
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 			  		style : 'expanded'
 			  	},
 			  	files: {
-					'style.css':'scss/style.scss',
+					'style.css':'sass/style.scss',
 				}
 			},
 			release: {
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 			  		style : 'expanded'
 			  	},
 			  	files: {
-					'style.css':'scss/style.scss',
+					'style.css':'sass/style.scss',
 				}
 			},
 		},
