@@ -3,7 +3,6 @@ module.exports = function(grunt) {
 
 	// load all tasks
 	require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
-
     grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
@@ -77,7 +76,8 @@ module.exports = function(grunt) {
 	});
 
     grunt.registerTask( 'default', [
-    	'sass:dev'
+    	'sass:dev',
+    	'watch'
     ]);
     grunt.registerTask( 'release', [
     	'sass:release',
@@ -87,5 +87,5 @@ module.exports = function(grunt) {
 		'uglify:release',
 		'makepot'
 	]);
-
+	grunt.loadNpmTasks('grunt-contrib-watch');
 };
